@@ -1,6 +1,7 @@
 # coding: utf-8
-require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
-require File.expand_path(File.dirname(__FILE__) + '/../../lib/event4r/http_client')
+# require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+require_relative '../spec_helper'
+require_relative '../../lib/event4r/http_client'
 
 describe Event4r::HTTPClient do
   context 'when simple http get request' do

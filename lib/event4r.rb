@@ -1,5 +1,3 @@
 require "event4r/version"
+require "event4r/atnd_beta"
 
-module Event4r
-  # Your code goes here...
-end

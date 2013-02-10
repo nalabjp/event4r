@@ -1,21 +1,15 @@
 # encoding: utf-8
-require_relative "http_client"
+require_relative "event_site"
 
 module Event4r
-  class AtndBeta
+  class AtndBeta < EventSite
     def initialize
-      @client = HTTPClient.new("api.atnd.org")
+      create_client("api.atnd.org")
     end
 
     def search_event(params = {})
       path = "/events/"
-      resp = @client.request_json(path, make_query(params))
-      return resp
-    end
-
-    def make_query(params)
-      params[:format] = "json"
-      params.map { |k, v| "#{k}=#{v}" }.join("&")
+      return search_event_impl(path, params)
     end
   end
 end

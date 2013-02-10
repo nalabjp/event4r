@@ -1,3 +1,5 @@
 require "event4r/version"
 require "event4r/atnd_beta"
-
+require "event4r/event_atnd"
+require "event4r/connpass"
+require "event4r/zusaar"

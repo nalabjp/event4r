@@ -3,7 +3,9 @@ require_relative "http_client"
 
 module Event4r
   class EventSite
+    attr_reader :name
     def initialize
+      @name = nil
       raise NotImplementedError, "need to call create_client"
     end
 

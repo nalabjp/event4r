@@ -4,6 +4,7 @@ require_relative "event_site"
 module Event4r
   class AtndBeta < EventSite
     def initialize
+      @name = File.basename(__FILE__, '.rb')
       create_client("api.atnd.org")
     end
 
